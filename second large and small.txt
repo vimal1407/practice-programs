@@ -1,0 +1,39 @@
+static int secondlargest(int n, int []a){
+    int largest = a[0];
+        int smallest = -1;
+        for (int i = 1;i<n;i++){
+            if(largest < a[i]){
+                smallest = largest;
+                largest = a[i];
+            }
+            else if(smallest <a[i]){
+                smallest =a[i];
+            }
+        }
+        return smallest;
+    }
+    static int secondsmallest(int n,int []a){
+    int smallest = a[0];
+        int largest = Integer.MAX_VALUE;
+        for (int i = 1;i<n;i++){
+            if(smallest >a[i]){
+                largest = smallest;
+                smallest = a[i];
+            }
+            else if(largest >a[i]){
+                largest =a[i];
+            }
+        }
+        return largest;
+    }
+    public static int[] getSecondOrderElements(int n, int []a) {
+       int  slargest = secondlargest(n,a);
+        int ssmallest = secondsmallest(n,a);
+        return new int[]{slargest,ssmallest};
+    }
+}
+
+
+
+
+
