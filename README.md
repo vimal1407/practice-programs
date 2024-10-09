@@ -1,1 +1,1 @@
-The code is about finding the second largest and second smallest element in the array within the optimal timerange
+In this repository i have been uploading the code which i practicing in different websites and for future reference
